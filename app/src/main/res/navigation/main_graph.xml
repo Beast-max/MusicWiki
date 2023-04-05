@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/genersFragment">
+
+    <fragment
+        android:id="@+id/genersFragment"
+        android:name="com.example.musicwiki.fragment.GenersFragment"
+        android:label="fragment_geners"
+        tools:layout="@layout/fragment_geners" >
+        <action
+            android:id="@+id/action_genersFragment_to_genreInfoFragment"
+            app:destination="@id/genreInfoFragment" />
+        <action
+            android:id="@+id/action_genersFragment_to_albumInfoFragment"
+            app:destination="@id/albumInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genreInfoFragment"
+        android:name="com.example.musicwiki.fragment.GenreInfoFragment"
+        android:label="fragment_genre_info"
+        tools:layout="@layout/fragment_genre_info" >
+        <action
+            android:id="@+id/action_genreInfoFragment_to_albumInfoFragment"
+            app:destination="@id/albumInfoFragment" />
+        <action
+            android:id="@+id/action_genreInfoFragment_to_artistInfoFragment"
+            app:destination="@id/artistInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumFragment"
+        android:name="com.example.musicwiki.fragment.AlbumFragment"
+        android:label="fragment_album"
+        tools:layout="@layout/fragment_album" />
+    <fragment
+        android:id="@+id/albumInfoFragment"
+        android:name="com.example.musicwiki.fragment.AlbumInfoFragment"
+        android:label="fragment_album_info"
+        tools:layout="@layout/fragment_album_info" />
+    <fragment
+        android:id="@+id/artistFragment"
+        android:name="com.example.musicwiki.fragment.ArtistFragment"
+        android:label="ArtistFragment" />
+    <fragment
+        android:id="@+id/artistInfoFragment"
+        android:name="com.example.musicwiki.fragment.ArtistInfoFragment"
+        android:label="ArtistInfoFragment" />
+</navigation>
