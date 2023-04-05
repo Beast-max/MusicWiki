@@ -56,6 +56,8 @@ class ArtistInfoFragment : Fragment() {
                     binding.progressBar.visibility = View.GONE
                     binding.title.text = it.data?.artist?.name
                     binding.disc.text = it.data?.artist?.bio?.summary
+                    binding.count.text = it.data?.artist?.stats?.playcount
+                    binding.follower.text = it.data?.artist?.stats?.listeners
                     it.data?.artist?.image?.get(3)?.text?.let { it1 -> binding.banner.loadimage(it1) }
                 }
                 is BaseResponse.Error -> {
